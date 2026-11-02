@@ -1,0 +1,34 @@
+name: Refresh profile activity
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 0 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: profile-activity
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image renderer
+        run: python3 -m pip install Pillow==12.0.0
+      - name: Read contribution calendar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api graphql -f query='query { user(login:"jirapas-oa") { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { date contributionCount weekday } } } } } }' > "$RUNNER_TEMP/calendar.json"
+      - name: Render charts
+        run: python3 scripts/build_activity.py "$RUNNER_TEMP/calendar.json"
+      - name: Save updated charts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/activity-31-days.png assets/contribution-realm.png assets/contribution-realm.gif
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh profile activity charts'
+            git push
+          fi

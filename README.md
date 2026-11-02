@@ -51,12 +51,12 @@
 <p align="center"><samp>EVERY CONTRIBUTION WRITES ANOTHER CHAPTER</samp></p>
 
 <a href="https://github.com/jirapas-oa?tab=overview">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jirapas-oa&amp;bg_color=101024&amp;color=b1a7c9&amp;title_color=c4a2ff&amp;line=8ce5e5&amp;point=efcf95&amp;area=true&amp;area_color=7954a6&amp;border_color=51416c&amp;custom_title=The%20Data%20Realm%20-%20Last%2031%20Days&amp;days=31&amp;radius=0" width="100%" alt="jirapas-oa GitHub activity over the last 31 days, in violet and cyan. Open the profile to see current contributions if this external graph is unavailable." />
+  <img src="./assets/activity-31-days.png" width="100%" alt="Actual GitHub contributions over the last 31 days. Updated date is printed in the chart." />
 </a>
 
 <img src="./assets/contribution-realm.gif" width="100%" alt="Dated snapshot of actual GitHub contributions, with a decorative moving golden marker. The snapshot date is printed inside the chart." />
 
-<p align="center"><sub>31-day chart refreshes via GitHub Readme Activity Graph. The contribution map is a dated snapshot; its moving light is decorative.</sub></p>
+<p align="center"><sub>Charts refresh daily via GitHub Actions; the latest update date is shown in each chart. The moving light is decorative.</sub></p>
 
 <a id="portals"></a>
 

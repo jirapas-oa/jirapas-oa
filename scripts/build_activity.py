@@ -36,3 +36,28 @@ for index in range(40):
     frames.append(frame.quantize(colors=64))
 frames[0].save(root/'assets/contribution-realm.gif',save_all=True,append_images=frames[1:],duration=90,loop=0,optimize=True,disposal=2)
 print('Created contribution-realm.gif and PNG snapshot.')
+
+# A local image keeps the profile independent of external image services.
+recent = days[-31:]
+chart = Image.new('RGB', (960, 360), '#101024')
+draw = ImageDraw.Draw(chart)
+draw.rectangle((9, 9, 950, 350), outline='#51416c', width=2)
+draw.text((30, 26), 'THE DATA REALM / LAST 31 DAYS', font=font(23), fill='#c4a2ff')
+draw.text((30, 64), f"{sum(x['contributionCount'] for x in recent)} contributions / {recent[0]['date']} to {recent[-1]['date']}", font=font(16), fill='#b1a7c9')
+maximum = max(4, max(x['contributionCount'] for x in recent))
+maximum = ((maximum + 3) // 4) * 4
+left, right, top, bottom = 65, 912, 115, 275
+for i in range(5):
+    y = bottom - i*(bottom-top)/4
+    draw.line((left, y, right, y), fill='#302b48')
+    draw.text((25, y-8), str(i*maximum//4), font=font(13), fill='#b1a7c9')
+points = [(left+i*(right-left)/max(1,len(recent)-1), bottom-day['contributionCount']/maximum*(bottom-top)) for i,day in enumerate(recent)]
+draw.polygon([(left,bottom), *points, (right,bottom)], fill='#302445')
+draw.line(points, fill='#8ce5e5', width=3)
+for x,y in points:
+    draw.ellipse((x-3,y-3,x+3,y+3), fill='#efcf95')
+for i in [0, 10, 20, len(recent)-1]:
+    draw.text((points[i][0], 295), recent[i]['date'][5:], font=font(14), fill='#b1a7c9', anchor='mm')
+draw.text((30, 324), 'GitHub contributions / updated '+days[-1]['date'], font=font(13), fill='#b1a7c9')
+chart.save(root/'assets/activity-31-days.png')
+print('Created activity-31-days.png.')
