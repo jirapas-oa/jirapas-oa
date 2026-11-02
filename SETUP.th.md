@@ -12,7 +12,7 @@ GitHub จะแสดง README เมื่อ repository เป็น public 
 
 ## ไฟล์ภาพ
 
-- `assets/hero-demon-lord.png` — แบนเนอร์ที่ README ใช้อยู่
+- `assets/hero-chibi-demon.png` — แบนเนอร์จอมมารจิบิที่ README ใช้อยู่
 - `assets/hero-pixel-rpg.png` — แบนเนอร์ต้นฉบับตัวละครนักผจญภัย เก็บไว้เป็นทางเลือก
 
 หน้าโปรไฟล์มีแบนเนอร์จอมมาร, Character Sheet, Skill Inventory, Quest Board, World Map และ Save Point ครบทั้งหน้า

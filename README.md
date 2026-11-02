@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero-demon-lord.png" width="100%" alt="JIRAPAS-OA — A new adventure begins. An anime pixel demon lord and a cyan slime overlook a glowing fantasy kingdom." />
+  <img src="./assets/hero-chibi-demon.png" width="100%" alt="JIRAPAS-OA — A new adventure begins. A cute chibi demon lord cuddles a cyan slime above a glowing fantasy kingdom." />
 </p>
 
 <h1 align="center">The Data Realm of jirapas-oa</h1>
