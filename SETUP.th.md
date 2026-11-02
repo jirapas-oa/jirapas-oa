@@ -31,8 +31,8 @@ Repository โปรไฟล์: https://github.com/jirapas-oa/jirapas-oa
 
 ## ชุด Animation และกราฟ
 
-- `assets/avatar/demon-lord-avatar.gif` — จอมมารกะพริบตาและออร่าใน README
-- `assets/avatar/demon-lord-avatar.png` — ภาพนิ่งสำหรับตั้ง avatar ของบัญชี
+- `assets/avatar/chibi-demon-avatar.gif` — จอมมารกะพริบตาและออร่าใน README
+- `assets/avatar/chibi-demon-avatar.png` — ภาพนิ่งสำหรับตั้ง avatar ของบัญชี
 - `assets/contribution-realm.gif` — แผนที่ contribution จริง ณ วันที่ระบุในภาพ มีไฟวิ่งตกแต่ง ไม่ใช่ข้อมูลสด
 - อัปเดตภาพ snapshot: เรียก GitHub GraphQL เพื่อรับ `user.contributionsCollection.contributionCalendar` พร้อม `totalContributions`, `weeks.contributionDays` ที่มี `date`, `contributionCount`, `weekday`; บันทึก JSON แล้วรัน `python3 scripts/build_activity.py path/to/data.json` (ต้องมี Pillow)
 - อัปโหลด `README.md` และโฟลเดอร์ `assets` ไปที่ repository เดิมเพื่อใช้รุ่นนี้

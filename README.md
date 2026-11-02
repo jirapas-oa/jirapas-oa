@@ -5,7 +5,7 @@
 <h1 align="center">The Data Realm of jirapas-oa</h1>
 
 <p align="center">
-  <img src="./assets/avatar/demon-lord-avatar.gif" width="200" alt="Animated demon lord: blinking violet eyes and a glowing magical aura." />
+  <img src="./assets/avatar/chibi-demon-avatar.gif" width="200" alt="Cute chibi demon lord enjoying a head pat, with blinking lavender eyes and a cyan slime companion." />
   <br /><samp>✦ THE DEMON LORD HAS ENTERED THE REALM ✦</samp>
 </p>
 
