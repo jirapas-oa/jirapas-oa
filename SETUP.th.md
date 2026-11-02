@@ -29,4 +29,15 @@ GitHub จะแสดง README เมื่อ repository เป็น public 
 
 Repository โปรไฟล์: https://github.com/jirapas-oa/jirapas-oa
 
+## ชุด Animation และกราฟ
+
+- `assets/avatar/demon-lord-avatar.gif` — จอมมารกะพริบตาและออร่าใน README
+- `assets/avatar/demon-lord-avatar.png` — ภาพนิ่งสำหรับตั้ง avatar ของบัญชี
+- กราฟ 31 วันใช้บริการ https://github.com/Ashutosh00710/github-readme-activity-graph โดยโหลดข้อมูลจาก username สาธารณะ อาจมี cache หรือหยุดให้บริการชั่วคราว
+- `assets/contribution-realm.gif` — แผนที่ contribution จริง ณ วันที่ระบุในภาพ มีไฟวิ่งตกแต่ง ไม่ใช่ข้อมูลสด
+- อัปเดตภาพ snapshot: เรียก GitHub GraphQL เพื่อรับ `user.contributionsCollection.contributionCalendar` พร้อม `totalContributions`, `weeks.contributionDays` ที่มี `date`, `contributionCount`, `weekday`; บันทึก JSON แล้วรัน `python3 scripts/build_activity.py path/to/data.json` (ต้องมี Pillow)
+- อัปโหลด `README.md` และโฟลเดอร์ `assets` ไปที่ repository เดิมเพื่อใช้รุ่นนี้
+- การอัปโหลด README ไม่เปลี่ยน avatar ของบัญชี: ตั้งรูปที่ GitHub Settings → Public profile → Profile picture
+- `profile-preview.png` เป็นภาพตัวอย่างรุ่นก่อนเพิ่ม Animation/กราฟ
+
 หน้าโปรไฟล์: https://github.com/jirapas-oa
